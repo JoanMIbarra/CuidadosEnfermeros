@@ -1,0 +1,101 @@
+<section id="about" class="about">
+      <div class="container">
+
+ <form action="/pacientes/alta" method="POST">
+
+              <p>Tu N°Historia: <input type="number" name="NumHistoria"></p>
+             
+             <div class="form-group">
+      <label>Antecedente(s):
+        <div>
+          <input type="checkbox" name="Antecedentes[]" value="Diabetes" /> Diabetes<br />
+          <input type="checkbox" name="Antecedentes[]" value="Cardiovascular" /> Cardiovasculares<br />
+          <input type="checkbox" name="Antecedentes[]" value="Asma" /> Asma<br />
+          <input type="checkbox" name="Antecedentes[]" value="Cancer" /> Cancer<br />
+          <input type="checkbox" name="Antecedentes[]" value="EPOC" /> EPOC<br />
+          <input type="checkbox" name="Antecedentes[]" value="Otros" /> Otros<br />
+        </div><br />
+      </label>
+    </div>
+              <!--<p>Antecedentes:
+            
+                  <br><br><input type="text" value="Diabetes" name="Antecedentes[]"><br>
+                  <input type="checkbox" value="Cardiovasculares" name="Antecedentes[]">Cardiovasculares<br>
+                  <input type="checkbox" value="Asma"  name="Antecedentes[]">Asma<br>
+                  <input type="checkbox" value="Cancer" name="Antecedentes[]">Cáncer<br>
+                  <input type="checkbox" value="EPOC" name="Antecedentes[]">EPOC<br>
+                  <input type="checkbox" value="Otros" name="Antecedentes[]">Otros</p>
+                
+              </p>-->
+                <label for="Nconsultas">¿Posee historial de consultas médicas periódicas?</label>
+                <select class="form-control" id="Nconsultas" name="Historial">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+
+                Frecuencia (Cantidad por año): <input type="number" name="FrecuenciaAnio"><br><br> 
+                <label for="tabaco">Tabaquismo: </label>
+                <select class="form-control" id="tabaco" name="Tabaquismo">
+                    <option>Si</option>
+                    <option>No</option>
+                </select>
+                         ¿Cigarillos por dia?: <input type="number" name="TabxDia">
+                         ¿Desde cuantos años?: <input type="number" name="TabCantAnio"><br><br>
+                <label for="alcohol">¿Consume bebidas alcoholicas?: </label>
+                <select class="form-control" id="alcohol" name="Alcohol">
+                    <option>Si</option>
+                    <option>No</option>
+                </select>
+                         ¿Litros por dia?: <input type="number" name="AlcxDia">
+                         ¿Desde cuantos años?: <input type="number" name="AlcCantAnio"><br><br>
+             
+
+
+                  ¿Consume drogas?:<br>
+                  <input type="checkbox" value="Ninguna" name="Drogas[]">Ninguna<br>
+                  <input type="checkbox" value="Marihuana" name="Drogas[]">Marihuana<br>
+                  <input type="checkbox" value="Cocaina" name="Drogas[]">Cocaina<br>
+                  <input type="checkbox" value="Extasis" name="Drogas[]">Extasis<br>
+                  <input type="checkbox" value="Otras" name="Drogas[]">Otras<br><br>
+
+
+              <label>Cuanto (Según la de mayor uso)</label>
+                <select class="form-control" id="TimeUso2" name="DroFrecuencia">
+                    <option value="Todos los dias">Todos los dias</option>
+                    <option value="Semanalmente">Semanalmente</option>
+                    <option value="Ocasionalmente">Ocasionalmente</option>
+                    <option value="Nunca">Nunca</option>
+                </select>
+
+                Desde cuantos años?: <input type="number" name="DroCantAnio"><br><br>
+           
+
+            
+                <label>¿En su domicilio toma alguna medicación indicada por el medico ?: </label>
+                <select class="form-control" id="medicina" name="Medicacion">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <br><br>
+
+
+                ¿Cuál/es?:<br><br>
+                  <input type="checkbox" value="Antihipertensivos" name="MedCual[]">Antihipertensivos<br>
+                  <input type="checkbox" value="Antidiabeticos" name="MedCual[]">Antidiabeticos<br>
+                  <input type="checkbox" value="Diureticos" name="MedCual[]">Diureticos<br>
+                  <input type="checkbox" value="Antinflamatorios" name="MedCual[]">Antinflamatorios<br>
+                  <input type="checkbox" value="Broncodilatores" name="MedCual[]">Broncodilatores<br>
+                  <input type="checkbox" value="ATB" name="MedCual[]">ATB<br>
+                  <input type="checkbox" value="Hormona Tiroides" name="MedCual[]">Hormona tiroides<br>
+                  <input type="checkbox" value="Para el colesterol" name="MedCual[]">Para el colesterol<br>
+                  <input type="checkbox" value="Antiarritmicos" name="MedCual[]">Antiarritmicos<br>
+                  <input type="checkbox" value="Anti anginosos" name="MedCual[]">Anti anginosos<br>
+                  <input type="checkbox" value="Otros" name="MedCual[]">Otros<br><br>
+            
+
+            
+              
+                <label >Comentario:</label><br>
+                <textarea class="form-control" id="Comentario" rows="3"  name="ComentarioAdc"></textarea>
+
+                <p><button type="submit" class="get-started-btn">Enviar</button></p>

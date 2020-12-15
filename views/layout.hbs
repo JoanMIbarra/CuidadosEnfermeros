@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{{title}}</title>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link href="/img/favicon.png" rel="icon">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/vendor/icofont/icofont.min.css">
+  <link rel="stylesheet" href="/vendor/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" href="/vendor/remixicon/remixicon.css">
+  <link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="/vendor/aos/aos.css" >
+    
+  </head>
+  <body>
+    <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="/">UNMDP</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+
+        <ul>
+          <li class="active"><a style="padding-top: 10px;" href="index.php">Inicio</a></li>
+          
+         
+   
+
+          <li class="drop-down "><a style="padding-top: 10px;" href="#">Perfil</a>
+                          
+                
+                <br>
+                <li><a style="padding-top: 10px;" href="logout.php">Logout</a></li>
+        
+          </li>
+        
+          <li class="drop-down"><a style="padding-top: 10px;" href="#">Patrones de la salud</a>
+              <ul>
+                  <li><a href="/pacientes/valoracion">Guía de valoración</a></li>
+                  <li><a href="/pacientes/alta">1. Percepción / Cuidados de la salud</a></li>
+                  <li><a href="/pacientes/actividad">2. Actividad física / Ejercicio </a></li>
+                  <li><a href="/pacientes/nutricional">3. Nutricional / Metabólico </a></li>
+                  <li><a href="/pacientes/eliminacion">4. Eliminacion</a></li>
+                  <li><a href="/pacientes/descanso">5. Sueño</a></li>
+                  <li><a href="/pacientes/cognitivo-perceptivo">6. Cognitivo</a></li>
+                  <li><a href="autopercepcion7.html">7. Autopercepción</a></li>
+                  <li><a href="relaciones8.html">8. Relaciones</a></li>
+                  <li><a href="adaptacion9.html">9. Adaptación</a></li>
+                  <li><a href="sexualidad10.html">10. Sexualidad</a></li>
+                  <li><a href="valores11.html">11. Valores</a></li>
+              </ul>
+            </li> 
+        </nav>
+
+         <a href="buscar.html" class="get-started-btn">Buscar</a>
+
+        
+          <!--<li><a href="login.php">Login</a></li>
+          <li><a href="signup.php">SignUp</a></li>-->
+      
+        </ul>
+        
+
+      <form action="/sessions/4" method="post">
+        <input name="_method" type="hidden" value="delete">
+        <input name="_csrf_token" type="hidden" value="JBxGTxkhJX09aUM+IjEVNwQHFF8jEAAAbPi+AtgRE+5sMuDRLfFmjg==">
+      </form>
+    </div>
+    
+  </header>
+    <br><br><br>
+    {{{body}}}
+  </body>
+</html>

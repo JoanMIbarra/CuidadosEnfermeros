@@ -1,0 +1,77 @@
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs"  >
+      <div class="container">
+        <h2>DATOS GENERALES</h2>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+<form action="formulario.php" method="POST">
+
+                <div class="form-group">
+                    <label>Nombre y Apellido (Iniciales):</label>
+                                    <input type="text" class="form-control" placeholder="Martín" name="nombre">
+                                    <input type="text" class="form-control" placeholder="Gómez" name="apellido">
+                    <p>Tu edad: <input type="number" name="edad"> </p>
+                    <p>Tu N°Historia: <input type="number" name="NumHistoria"> </p>
+
+                    <label>Identidad de genero:</label>
+                    <select class="form-control" id="genero" name="genero">
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="Otro">Otro</option>
+                  </select><br>
+              
+                    <label >Domicilio de residencia:</label>
+                    <select class="form-control" id="domicilio" name="residencia">
+                        <option value="Mar del plata">Mar del Plata ciudad</option>
+                        <option value="Batan">Batan</option>
+                        <option value="Sierra de los padres">Sierra de los Padres</option>
+                        <option value="Rural">Rural</option>
+                        <option value="Otra ciudad">Otra ciudad</option>
+                  </select><br>
+              
+  
+                    <label for="lugar">Lugar de la valoración actual:</label>
+                    <select class="form-control" id="lugar" name="lugarActual">
+                        <option value="Domicilio" >Domicilio</option>
+                        <option value="Residencia adultos mayores">Residencia adultos mayores</option>
+                        <option value="CAPS">CAPS</option>
+                        <option value="Servicio de internacion">Servicio de internacion</option>
+                    </select><br>
+                           
+                      <label for="start">Fecha de Ingreso:</label>
+                  <input type="date" id="start" name="FechaIngreso"
+                    value="2020-09-28"
+                    min="1950-01-01" max="2050-09-30"><br>
+              
+                           <label for="start">Fecha de Valoracion:</label>
+                 <input type="date" id="start" name="FechaValoracion"
+                      value="2020-09-28"
+                      min="2020-01-01" max="2050-09-30"><br>
+
+                   <label >Motivo ingreso<br>
+                   <input type="checkbox" value="Enf.Respiratoria" name="MotivoIngreso[]">Enfermedad Respiratoria<br>
+                  <input type="checkbox" value="Cardiovascular" name="MotivoIngreso[]">Cardiovascular<br>
+                  <input type="checkbox" value="Diabetes" name="MotivoIngreso[]">Diabetes<br>
+                  <input type="checkbox" value="Traumatismos" name="MotivoIngreso[]">Traumatismos<br>
+                  <input type="checkbox" value="ACV" name="MotivoIngreso[]">ACV<br>
+                  <input type="checkbox" value="Cirugia" name="MotivoIngreso[]">Cirugía<br>
+                  <input type="checkbox" value="Enf.Digestivas" name="MotivoIngreso[]">Enfermedades Digestivas<br>
+                  <input type="checkbox" value="Cancer" name="MotivoIngreso[]">Cancer<br>
+                <input type="checkbox" value="Otro" name="MotivoIngreso[]">Otro</input><br>
+                
+                  </label>
+                  <br>
+        
+                                <label for="Comentario">Comentario Adicional:</label>
+                                <textarea class="form-control" id="Comentario" rows="3" name="ComentarioAdc"></textarea>
+                                </div>
+          
+                           <p><button type="submit" class="get-started-btn">Enviar</button></p>
+</form>
+</div>
