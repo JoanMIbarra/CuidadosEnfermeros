@@ -10,21 +10,21 @@
     <section id="about" class="about">
       <div class="container">
 
- <form action="" method="POST">
+ <form action="/pacientes/actividad" method="POST">
 
-  <p><u>Patron habitual</u> (En su domicilio): <input type="text" name="PaHabitual"></p>
+  <p><u>Patron habitual</u> (En su domicilio):</p>
 
 
-    <label for="deambulacion">Deambulación: </label>
-      <select class="form-control" id="deambulacion" name="Deambulación">
+    <label for="Deambulacion">Deambulación: </label>
+      <select class="form-control" id="Deambulacion" name="Deambulacion">
         <option>Sin ayuda</option>
         <option>Con ayuda</option>
         <option>Reposo prolongado en cama</option>
       </select>
 
 
-      <label for="actividadFisica">Realiza actividad física: </label>
-        <select class="form-control" id="actividadfisica" name="ActividadFisica">
+      <label for="ActFisica">Realiza actividad física: </label>
+        <select class="form-control" id="ActFisica" name="ActFisica">
           <option>Diaria</option>
           <option>3 a 5 x semana</option>
           <option>1 a 2 x semana</option>
@@ -32,112 +32,113 @@
         </select>
 
 
-      <label for="antecaidas">Antecedentes de caídas: </label>
-        <select class="form-control" id="antecaidas" name="AnteCaídas">
+      
+
+
+      <label for="ActRecreativa">Realiza actividades recreativas en su tiempo libre: </label>
+        <select class="form-control" id="ActRecreativa" name="ActRecreativa">
           <option>Si</option>
           <option>No</option>
         </select>
 
-
-      <label for="actirecrea">Realiza actividades recreativas en su tiempo libre: </label>
-        <select class="form-control" id="actirecrea" name="ActiRecreativas">
+<label for="Caidas">Antecedentes de caídas: </label>
+        <select class="form-control" id="Caidas" name="Caidas">
           <option>Si</option>
           <option>No</option>
         </select>
 
+    <br><br><p><u>Estado respiratorio:</u> </p>
+    <p>Patron respiratorio:</p>
+    <p>FR: <input type="number" name="FR"></p>
 
-    <br><br><p><u>Estado respiratorio:</u> <input type="text" name="EstaRespiratorio"></p>
-    <p>Patron respiratorio: <input type="text" name="PatronRespiratorio"></p>
-    <p>FR: <input type="text" name="FR"></p>
 
-
-    <label for="ritmorespira">Ritmo: </label>
-        <select class="form-control" id="ritmorespira" name="RitmoRespira">
+    <label for="RitmoFR">Ritmo: </label>
+        <select class="form-control" id="RitmoFR" name="RitmoFR">
           <option>Regular</option>
           <option>Irregular</option>
         </select>
 
-    <label for="amplitudrespira">Amplitud: </label>
-        <select class="form-control" id="amplitudrespira" name="AmplitudRespira">
+    <label for="AmplitudFR">Amplitud: </label>
+        <select class="form-control" id="AmplitudFR" name="AmplitudFR">
           <option>Amplio</option>
           <option>Escaso</option>
         </select>
 
-    <label for="simerespira">Simetría: </label>
-        <select class="form-control" id="simerespira" name="SimeRespira">
+    <label for="SimetriaFR">Simetría: </label>
+        <select class="form-control" id="SimetriaFR" name="SimetriaFR">
           <option>Simétrico</option>
           <option>Asimetrico</option>
         </select>
 
 
-  <br><br><p><u>Estado cardiovascular:</u> <input type="" name="EstaCardio"></p>
-  <p>Pulso: <input type="text" name="Pulso"></p>
-  FC: <input type="number" name="FC">
+  <br><br><p><u>Estado cardiovascular:</u></p>
+  <p>Pulso:</p>
+  FC: <input type="number" id="FC" name="FC"><br><br>
 
-    <label for="ritmocardio">Ritmo: </label>
-        <select class="form-control" id="ritmocardio" name="RitmoCardio">
+    <label for="RitmoFC">Ritmo: </label>
+        <select class="form-control" id="RitmoFC" name="RitmoFC">
           <option>Regular</option>
           <option>Irregular</option>
         </select>
 
-    <label for="intensicardio">Intensidad: </label>
-        <select class="form-control" id="intensicardio" name="IntensiCardio">
+    <label for="IntensidadFC">Intensidad: </label>
+        <select class="form-control" id="IntensidadFC" name="IntensidadFC">
           <option>Nitido</option>
           <option>Débil</option>
         </select>
 
-    <label for="tensioncardio">Amplitud: </label>
-        <select class="form-control" id="tensioncardio" name="TensionCardio">
+    <label for="TensionFC">Tension: </label>
+        <select class="form-control" id="TensionFC" name="TensionFC">
           <option>Duro</option>
           <option>Blando</option>
         </select>
 
-    <label for="amplitudcardio">Amplitud: </label>
-        <select class="form-control" id="amplitudcardio" name="AmplitudCardio">
-          <option>Amplia</option>
-          <option>Escasa</option>
+    <label for="AmplitudFC">Amplitud: </label>
+        <select class="form-control" id="AmplitudFC" name="AmplitudFC">
+          <option>Amplio</option>
+          <option>Escaso</option>
         </select>
-    <br>TA sistolica acostado:   <input type="number" name="TAsistolica">
-    <br>TA diastolica acostado: <input type="number" name="TAdiasto">
-    <br>TA sistolica sentado:    <input type="number" name="TAsisto">
-    <br>TA diastolica sentado: <input type="number" name="TAdias">
+    <br>TA sistolica acostado:   <input type="number" name="TAsa">
+    <br>TA diastolica acostado: <input type="number" name="TAda">
+    <br>TA sistolica sentado:    <input type="number" name="TAss">
+    <br>TA diastolica sentado: <input type="number" name="TAds">
 
   <br><br><br><p><u>Actividades de la Vida diaria (AVD)</u></p>
 
-    <label for="alimentacion">Alimentación: </label>
-        <select class="form-control" id="alimentacion" name="Alimentación">
+    <label for="Alimentacion">Alimentación: </label>
+        <select class="form-control" id="Alimentacion" name="Alimentacion">
           <option>Independiente</option>
           <option>Utiliza dispositivos de ayuda</option>
           <option>Con ayuda de una persona</option>
           <option>Dependiente total</option>
         </select>
 
-    <label for="baño">Baño/Eliminacion: </label>
-        <select class="form-control" id="baño" name="Baño">
+    <label for="Eliminacion">Baño/Eliminacion: </label>
+        <select class="form-control" id="Eliminacion" name="Eliminacion">
           <option>Independiente</option>
           <option>Utiliza dispositivos de ayuda</option>
           <option>Con ayuda de una persona</option>
           <option>Dependiente total</option>
         </select>
 
-    <label for="aseo">Aseo/Higiene: </label>
-        <select class="form-control" id="aseo" name="Aseo">
+    <label for="Aseo">Aseo/Higiene: </label>
+        <select class="form-control" id="Aseo" name="Aseo">
           <option>Independiente</option>
           <option>Utiliza dispositivos de ayuda</option>
           <option>Con ayuda de una persona</option>
           <option>Dependiente total</option>
         </select>
 
-    <label for="vestido">Vestido: </label>
-        <select class="form-control" id="vestido" name="Vestido">
+    <label for="Vestido">Vestido: </label>
+        <select class="form-control" id="Vestido" name="Vestido">
           <option>Independiente</option>
           <option>Utiliza dispositivos de ayuda</option>
           <option>Con ayuda de una persona</option>
           <option>Dependiente total</option>
         </select>
 
-    <label for="movicama">Movilidad en cama: </label>
-        <select class="form-control" id="movicama" name="MoviCama">
+    <label for="Movilidad">Movilidad en cama: </label>
+        <select class="form-control" id="Movilidad" name="Movilidad">
           <option>Independiente</option>
           <option>Utiliza dispositivos de ayuda</option>
           <option>Con ayuda de una persona</option>
@@ -146,7 +147,7 @@
 
 
     <br><br><label >Comentario:</label><br>
-      <textarea class="form-control" id="Comentario" rows="3"  name="ComentarioAdc"></textarea>
+      <textarea class="form-control" id="ComentarioADC" rows="3"  name="ComentarioAdc"></textarea>
     <p><button type="submit" class="get-started-btn">Enviar</button></p>
 
 </form>

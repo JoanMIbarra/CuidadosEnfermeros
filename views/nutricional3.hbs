@@ -10,38 +10,39 @@
     <section id="about" class="about">
       <div class="container" >
 
-<form action="formulario.php" method="POST">
+<form action="/pacientes/nutricional" method="POST">
                 <div class="form-group">
           <p><h1>Patrón habitual (En su domicilio)</h1></p>
           <br>
                     <label>Horario de las comidas: </label>
-                    <select class="form-control" id="horacomida" name="horacomida">
-                        <option value="Irregular">Irregular</option>
+                    <select class="form-control" id="Horarios" name="Horarios">
                         <option value="Regular">Regular</option>
-                        <option value="Otro">Entre horas</option>
+                        <option value="Irregular">Irregular</option>
+                        <option value="Entre horas">Entre horas</option>
                   </select><br>
               
                     <label >Ingesta de líquidos (aproximadamente):</label>
-                    <select class="form-control" id="liquidos" name="liquidoinfo">
-                        <option value="menoslt">Menos de 1lt</option>
-                        <option value="regularlt">1 a 1lt</option>
-                        <option value="maslt">Mas de 2lts</option>
+                    <select class="form-control" id="Liquido" name="Liquido">
+                        <option value="Menos de 1 lt">Menos de 1lt</option>
+                        <option value="1 a 2 lts">1 a 1lt</option>
+                        <option value="Mas de 2 lts">Mas de 2lts</option>
                   </select><br>
               
                     <label >Calidad:</label>
-                    <select class="form-control" id="bebidas" name="bebidainfo">
-                        <option value="Agua">Agua</option>
-                        <option value="Jugos">Jugos</option>
-                        <option value="Mate">Mate</option>
-                         <option value="Te">Te</option>
-                          <option value="Gaseosas">Bebidas gaseosas</option>
-                           <option value="Alcohol">Bebidas alcoholicas</option>
-                  </select><br>
+                    
+                  <input type="checkbox" value="Agua" name="Calidad[]">Agua<br>
+                  <input type="checkbox" value="Jugos" name="Calidad[]">Jugos<br>
+                  <input type="checkbox" value="Mate" name="Calidad[]">Mate<br>
+                  <input type="checkbox" value="Te" name="Calidad[]">Té<br>
+                  <input type="checkbox" value="Bebidas gaseosas" name="Calidad[]">Bebidas gaseosas<br>
+                  <input type="checkbox" value="Bebidas alcoholicas" name="Calidad[]">Bebidas alcoholicas<br>
+                  
+                  <br>
               
                 
                      
               <label>¿Dietas específicas?: </label>
-                <select class="form-control" id="dieta" name="Dietita">
+                <select class="form-control" id="Dietas" name="Dietas">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
@@ -49,28 +50,28 @@
 
 
                 ¿Cuál/es?:<br>
-                  <input type="checkbox" value="Hiposodica" name=" ">Hiposodica<br>
-                  <input type="checkbox" value="Adelgazar" name=" ">Para adelgazar<br>
-                  <input type="checkbox" value="Vegana" name=" ">Vegana<br>
-                  <input type="checkbox" value="Vegetariana" name=" ">Vegetariana<br>
-                  <input type="checkbox" value="Otra" name=" ">Otra<br>
+                  <input type="checkbox" value="Hiposodica" name="CualDieta[]">Hiposodica<br>
+                  <input type="checkbox" value="Adelgazar" name="CualDieta[]">Para adelgazar<br>
+                  <input type="checkbox" value="Vegana" name="CualDieta[]">Vegana<br>
+                  <input type="checkbox" value="Vegetariana" name="CualDieta[]">Vegetariana<br>
+                  <input type="checkbox" value="Otra" name="CualDieta[]">Otra<br>
                   <br>
 
                       <label>Intolerancia alimenticia</label>
-                <select class="form-control" id="Alimentos" name="IntoAlimen">
+                <select class="form-control" id="Intolerancia" name="Intolerancia">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
                 <br>
 
                 ¿A qué?:<br>
-                  <input type="checkbox" value="Grasas" name=" ">Grasas<br>
-                  <input type="checkbox" value="Leche" name=" ">Leche<br>
-                  <input type="checkbox" value="Picantes" name=" ">Picantes<br>
-                  <input type="checkbox" value="Otros" name=" ">Otros<br>
+                  <input type="checkbox" value="Grasas" name="AQue[]">Grasas<br>
+                  <input type="checkbox" value="Leche" name="AQue[]">Leche<br>
+                  <input type="checkbox" value="Picantes" name="AQue[]">Picantes<br>
+                  <input type="checkbox" value="Otros" name="AQue[]">Otros<br>
                 <br>
               <label>¿Cambios de peso en el ultimo mes?: </label>
-                <select class="form-control" id="peso" name="Pesaje">
+                <select class="form-control" id="CambioPeso" name="CambioPeso">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
@@ -78,147 +79,148 @@
 
 
               <label >¿Cuanto?</label>
-                    <select class="form-control" id="cambiospeso" name="Pesoact">
-                        <option value="BajoMas">Bajo más de 5kg</option>
-                        <option value="Bajo">Bajo hasta 5kg</option>
-                        <option value="Aumento">Aumento 5kg</option>
-                         <option value="AumentoMas">Aumento más de 5kg</option>
+                    <select class="form-control" id="CuantoPeso" name="CuantoPeso">
+                        <option value="Bajo hasta 5 Kg">Bajo hasta 5 Kg</option>
+                        <option value="Bajo mas de 5 Kg">Bajo mas de 5 Kg</option>
+                        <option value="Aumento hasta 5 Kg">Aumento hasta 5 Kg</option>
+                         <option value="Aumento mas de 5 Kg">Aumento mas de 5 Kg</option>
                   </select><br>
                   
                   <p><h1>Patrón actual</h1></p>
           <br>
-                   <p>Talla (mt): <input type="number" name="aproxtalla"> </p>
-                    <p>Peso (kg): <input type="number" name="aproxpeso"> </p>
+                   <p>Talla (mt): <input type="number" name="Talla"> </p>
+                    <p>Peso (kg): <input type="number" name="Peso"> </p>
                      <p>IMC: <input type="number" name="IMC"> </p>
 
                       <br>
                       ¿Presencia de?:<br>
-                  <input type="checkbox" value="Nauseas" name=" ">Nauseas<br>
-                  <input type="checkbox" value="Vomitos" name=" ">Vómitos<br>
-                  <input type="checkbox" value="Disfagia" name=" ">Disfagia<br>
-                  <input type="checkbox" value="Anorexia" name=" ">Anorexia<br>
+                  <input type="checkbox" value="Nauseas" name="Presencia[]">Nauseas<br>
+                  <input type="checkbox" value="Vomitos" name="Presencia[]">Vómitos<br>
+                  <input type="checkbox" value="Disfagia" name="Presencia[]">Disfagia<br>
+                  <input type="checkbox" value="Anorexia" name="Presencia[]">Anorexia<br>
 
               <label>Estado e higiene de la cavidad bucal:</label>
-                    <select class="form-control" id="estadoboca" name="CavidadBucal">
-                        <option value="BuenoB">Bueno</option>
-                        <option value="RegularB">Regular</option>
-                        <option value="MaloB">Malo</option>
+                    <select class="form-control" id="HigieneBucal" name="HigieneBucal">
+                        <option value="Bueno">Bueno</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Malo">Malo</option>
                   </select><br>
 
                           <label >Problemas bucales:</label>
-                    <select class="form-control" id="prombucal" name="ProblemaBucal">
-                        <option value="FaltadePiezas">Faltan piezas dentales</option>
-                        <option value="ProtesisDental">Prótesis dental</option>
+                    <select class="form-control" id="ProblemasBucales" name="ProblemasBucales">
+                        <option value="Faltan piezas bucales">Faltan piezas dentales</option>
+                        <option value="Protesis dental">Prótesis dental</option>
                   </select><br>
 
               <label>Estado e higiene de la piel:</label>
-                    <select class="form-control" id="estadopiel" name="Piel">
-                        <option value="BuenoP">Bueno</option>
-                        <option value="RegularP">Regular</option>
-                        <option value="MaloP">Malo</option>
+                    <select class="form-control" id="HigienePiel" name="HigienePiel">
+                        <option value="Bueno">Bueno</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Malo">Malo</option>
                   </select><br>
 
 
               <label >Piel:</label>
-                    <select class="form-control" id="tipopiel" name="InfoPiel">
+                    <select class="form-control" id="Piel" name="Piel">
                          <option value="Flexible">Flexible</option>
-                         <option value="Frágil">Frágil</option>
+                         <option value="Fragil">Frágil</option>
                         <option value="Deshidrata">Deshidratada</option>
                   </select><br>
 
-              <label>UPP(1)</label>
-                    <select class="form-control" id="upp1" name="upp1">
-                        <option value="TalonDe1">Talón Derecho</option>
-                        <option value="TalonIz1">Talón izquierdo</option>
-                        <option value="SacroDe1">Sacro derecho</option>
-                        <option value="SacroIz1">Sacro izquierdo</option>
-                        <option value="EscapularDe1">Escapular derecho</option>
-                        <option value="EscapularIz1">Escapular izquierdo</option>
-                        <option value="Otra1">Otra</option>
-                  </select><br>
-                    <p>Extension (cm x cm)(1)<input type="number" name="extension1"> </p>
-              <label >Estadio (1)</label>
-                    <select class="form-control" id="estadio1" name="estadio1">
-                        <option value="estadio11">I</option>
-                        <option value="estadio12">II</option>
-                        <option value="estadio13">III</option>
-                        <option value="estadio14">IV</option>
-                  </select><br><br>
+              <label>UPP(1)
+                    <select class="form-control" id="UPP1" name="UPP1">
+                        <option value="Talon dcho">Talón Derecho</option>
+                        <option value="Talon izdo">Talón izquierdo</option>
+                        <option value="Sacro dcho">Sacro derecho</option>
+                        <option value="Sacro izdo">Sacro izquierdo</option>
+                        <option value="Escapula dcho">Escapular derecho</option>
+                        <option value="Escapula izdo">Escapular izquierdo</option>
+                        <option value="Otra">Otra</option>
+                  </select><br></label>
+                    <p>Extension (cm x cm)(1)<input type="number" name="Extension1"> </p>
+              <label >Estadio (1)
+                    <select class="form-control" id="Estadio1" name="Estadio1">
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                  </select></label><br><br>
 
 
-              <label>UPP(2)</label>
-                    <select class="form-control" id="upp2" name="upp2">
-                        <option value="TalonDe2">Talón Derecho</option>
-                        <option value="TalonIz2">Talón izquierdo</option>
-                        <option value="SacroDe2">Sacro derecho</option>
-                        <option value="SacroIz2">Sacro izquierdo</option>
-                        <option value="EscapularDe2">Escapular derecho</option>
-                        <option value="EscapularIz2">Escapular izquierdo</option>
-                        <option value="Otra2">Otra</option>
-                  </select><br>
-                    <p>Extension (cm x cm)(2)<input type="number" name="extension2"> </p>
-              <label >Estadio (2)</label>
-                    <select class="form-control" id="estadio2" name="estadio2">
-                        <option value="estadio21">I</option>
-                        <option value="estadio22">II</option>
-                        <option value="estadio23">III</option>
-                        <option value="estadio24">IV</option>
-                  </select><br><br>
+              <label>UPP(2)
+                    <select class="form-control" id="UPP2" name="UPP2">
+                        <option value="Talon dcho">Talón Derecho</option>
+                        <option value="Talon izdo">Talón izquierdo</option>
+                        <option value="Sacro dcho">Sacro derecho</option>
+                        <option value="Sacro izdo">Sacro izquierdo</option>
+                        <option value="Escapula dcho">Escapular derecho</option>
+                        <option value="Escapula izdo">Escapular izquierdo</option>
+                        <option value="Otra">Otra</option>
+                      
+                  </select></label><br>
+                    <p>Extension (cm x cm)(2)<input type="number" name="Extension2"> </p>
+              <label >Estadio (2)
+                    <select class="form-control" id="Estadio2" name="Estadio2">
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                  </select></label><br><br>
 
 
 
-              <label>UPP(3)</label>
-                    <select class="form-control" id="upp3" name="upp3">
+              <label>UPP(3)
+                    <select class="form-control" id="UPP3" name="UPP3">
                         <option value="TalonDe3">Talón Derecho</option>
                         <option value="TalonIz3">Talón izquierdo</option>
                         <option value="SacroDe3">Sacro derecho</option>
                         <option value="SacroIz3">Sacro izquierdo</option>
                         <option value="EscapularDe3">Escapular derecho</option>
                         <option value="EscapularIz3">Escapular izquierdo</option>
-                        <option value="Otra3">Otra</option>
-                  </select><br>
-                    <p>Extension (cm x cm)(3)<input type="number" name="extension3"> </p>
+                        <option value="Otra">Otra</option>
+                  </select></label><br>
+                    <p>Extension (cm x cm)(3)<input type="number" name="Extension3"> </p>
               <label >Estadio (3)</label>
-                    <select class="form-control" id="estadio3" name="estadio3">
-                        <option value="estadio31">I</option>
-                        <option value="estadio32">II</option>
-                        <option value="estadio33">III</option>
-                        <option value="estadio34">IV</option>
+                    <select class="form-control" id="Estadio3" name="Estadio3">
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
                   </select><br>
 
               <label>¿Otras lesiones?:</label>
-                <select class="form-control" id="lesiones" name="Lesion">
+                <select class="form-control" id="OtraLesion" name="OtraLesion">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
               <label for="Comentario">Localización:</label>
-                                <textarea class="form-control" id="lesionlugar" rows="3" name="LocalizacionLesion"></textarea>
+                     <textarea class="form-control" id="Localizacion" rows="3" name="Localizacion"></textarea>
               
 
 
               <label>Prurito:</label>
-                <select class="form-control" id="prurito" name="Prurito">
+                <select class="form-control" id="Prurito" name="Prurito">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
 
               <label>¿Edemas?</label>
-                <select class="form-control" id="edemas" name="Edema">
+                <select class="form-control" id="Edemas" name="Edemas">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
                 ¿Dónde?:<br><br>
-                  <input type="checkbox" value="Sacroede" name=" ">Sacro<br>
-                  <input type="checkbox" value="Pretibiales" name=" ">Pretibiales<br>
+                  <input type="checkbox" value="Sacro" name="Donde[]">Sacro<br>
+                  <input type="checkbox" value="Pretibiales" name="Donde[]">Pretibiales<br>
               <label>Grado</label>
-                    <select class="form-control" id="grado" name="grado">
-                        <option value="grado1">+</option>
-                        <option value="grado2">++</option>
-                        <option value="grado3">+++</option>
-                        <option value="grado4">++++</option>
+                    <select class="form-control" id="Grado" name="Grado">
+                        <option value="+">+</option>
+                        <option value="++">++</option>
+                        <option value="+++">+++</option>
+                        <option value="++++">++++</option>
                   </select><br>
 
-                      <p>Temperatura: <input type="number" name="temperatura"> </p>
+                      <p>Temperatura: <input type="number" name="Temperatura"> </p>
 
                                 <label for="Comentario">Comentario Adicional:</label>
                                 <textarea class="form-control" id="Comentario" rows="3" name="ComentarioAdc"></textarea>

@@ -1,7 +1,14 @@
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h2>PERCEPCIÓN / CUIDADOS DE LA SALUD</h2>
+      </div>
+    </div>
 <section id="about" class="about">
       <div class="container">
 
- <form action="/pacientes/alta" method="POST">
+ <form action="/pacientes/percepcion" method="POST">
 
               <p>Tu N°Historia: <input type="number" name="NumHistoria"></p>
              
@@ -9,7 +16,7 @@
       <label>Antecedente(s):
         <div>
           <input type="checkbox" name="Antecedentes[]" value="Diabetes" /> Diabetes<br />
-          <input type="checkbox" name="Antecedentes[]" value="Cardiovascular" /> Cardiovasculares<br />
+          <input type="checkbox" name="Antecedentes[]" value="Cardiovasculares" /> Cardiovasculares<br />
           <input type="checkbox" name="Antecedentes[]" value="Asma" /> Asma<br />
           <input type="checkbox" name="Antecedentes[]" value="Cancer" /> Cancer<br />
           <input type="checkbox" name="Antecedentes[]" value="EPOC" /> EPOC<br />
@@ -17,18 +24,8 @@
         </div><br />
       </label>
     </div>
-              <!--<p>Antecedentes:
-            
-                  <br><br><input type="text" value="Diabetes" name="Antecedentes[]"><br>
-                  <input type="checkbox" value="Cardiovasculares" name="Antecedentes[]">Cardiovasculares<br>
-                  <input type="checkbox" value="Asma"  name="Antecedentes[]">Asma<br>
-                  <input type="checkbox" value="Cancer" name="Antecedentes[]">Cáncer<br>
-                  <input type="checkbox" value="EPOC" name="Antecedentes[]">EPOC<br>
-                  <input type="checkbox" value="Otros" name="Antecedentes[]">Otros</p>
-                
-              </p>-->
                 <label for="Nconsultas">¿Posee historial de consultas médicas periódicas?</label>
-                <select class="form-control" id="Nconsultas" name="Historial">
+                <select class="form-control" id="Historial" name="Historial">
                     <option value="Si">Si</option>
                     <option value="No">No</option>
                 </select>
@@ -84,7 +81,7 @@
                   <input type="checkbox" value="Antidiabeticos" name="MedCual[]">Antidiabeticos<br>
                   <input type="checkbox" value="Diureticos" name="MedCual[]">Diureticos<br>
                   <input type="checkbox" value="Antinflamatorios" name="MedCual[]">Antinflamatorios<br>
-                  <input type="checkbox" value="Broncodilatores" name="MedCual[]">Broncodilatores<br>
+                  <input type="checkbox" value="Broncodilatadores" name="MedCual[]">Broncodilatores<br>
                   <input type="checkbox" value="ATB" name="MedCual[]">ATB<br>
                   <input type="checkbox" value="Hormona Tiroides" name="MedCual[]">Hormona tiroides<br>
                   <input type="checkbox" value="Para el colesterol" name="MedCual[]">Para el colesterol<br>
