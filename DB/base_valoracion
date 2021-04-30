@@ -1,0 +1,149 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 22-10-2020 a las 01:17:59
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.2.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `base_valoracion`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datosgenerales`
+--
+
+CREATE TABLE `datosgenerales` (
+  `Nombre` varchar(30) NOT NULL,
+  `Apellido` varchar(30) NOT NULL,
+  `DNI` int(11) NOT NULL,
+  `NumHistoria` int(11) NOT NULL,
+  `Genero` enum('Hombre','Mujer','Otro') DEFAULT NULL,
+  `Residencia` enum('Mar del Plata','Batan','Sierra de los padres','Rural','Otro') DEFAULT NULL,
+  `LugarActual` enum('Domicilio','Residencia adultos mayores','CAPS','Servicio de Internacion') DEFAULT NULL,
+  `FechaIngreso` datetime DEFAULT NULL,
+  `FechaValoracion` datetime DEFAULT NULL,
+  `MotivoIngreso` set('Enf.Respiratoria','Cardiovascular','Diabetes','Traumatismos','ACV','Cirugia','Enf.Digestivas','Cancer','Otro') DEFAULT NULL,
+  `ComentarioAdc` tinytext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `datosgenerales`
+--
+
+INSERT INTO `datosgenerales` (`Nombre`, `Apellido`, `DNI`, `NumHistoria`, `Genero`, `Residencia`, `LugarActual`, `FechaIngreso`, `FechaValoracion`, `MotivoIngreso`, `ComentarioAdc`) VALUES
+('tobias', 'Arenas', 0, 567, 'Hombre', 'Mar del Plata', 'Domicilio', '2020-09-28 00:00:00', '2020-09-28 00:00:00', NULL, 'uio'),
+('tobias', 'Miri', 0, 678, 'Hombre', 'Mar del Plata', 'Domicilio', '2020-09-28 00:00:00', '2020-09-28 00:00:00', 'Enf.Respiratoria,Cardiovascular', 'asd'),
+('Luca', 'Miri', 0, 695, 'Hombre', 'Mar del Plata', 'Domicilio', '2020-09-28 00:00:00', '2020-09-28 00:00:00', 'Enf.Respiratoria,Cardiovascular,Diabetes,Traumatismos,ACV,Cirugia,Enf.Digestivas,Cancer,Otro', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `p1percepcion`
+--
+
+CREATE TABLE `p1percepcion` (
+  `NumHistoria` int(11) NOT NULL,
+  `Antecedentes` set('Diabetes','Cardiovasculares','Asma','EPOC','Otros') DEFAULT NULL,
+  `Historial` enum('Si','No') DEFAULT NULL,
+  `FrecuenciaAnio` int(11) DEFAULT NULL,
+  `Tabaquismo` enum('Si','No') DEFAULT NULL,
+  `TabxDia` int(11) DEFAULT NULL,
+  `TabCantAnio` int(11) DEFAULT NULL,
+  `Alcohol` enum('Si','No') DEFAULT NULL,
+  `AlcxDia` int(11) DEFAULT NULL,
+  `AlcCantAnio` int(11) DEFAULT NULL,
+  `Drogas` set('Ninguna','Marihuaba','Cocaina','Extasis','Otras') DEFAULT NULL,
+  `DroFrecuencia` enum('Todos los dias','Semanalmente','Ocasionalmente','Nunca') DEFAULT NULL,
+  `DroCantAnio` int(11) DEFAULT NULL,
+  `Medicacion` enum('Si','No') DEFAULT NULL,
+  `MedCual` set('Antihipertensivos','Antidiabeticos','Diureticos','Antinflamatorios','Broncodilatadores','ATB','Hormona Tiroides','Para el colesterol','Antiarritmicos','Anti anginosos','Otros') DEFAULT NULL,
+  `ComentarioAdc` tinytext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `p1percepcion`
+--
+
+INSERT INTO `p1percepcion` (`NumHistoria`, `Antecedentes`, `Historial`, `FrecuenciaAnio`, `Tabaquismo`, `TabxDia`, `TabCantAnio`, `Alcohol`, `AlcxDia`, `AlcCantAnio`, `Drogas`, `DroFrecuencia`, `DroCantAnio`, `Medicacion`, `MedCual`, `ComentarioAdc`) VALUES
+(3, 'Diabetes,Cardiovasculares,Asma,EPOC,Otros', 'Si', 3, 'Si', 4, 3, 'Si', 43, 3, '', 'Todos los dias', 3, 'Si', '', 'asd'),
+(11, 'Asma', 'Si', 3, 'Si', 5, 10, 'Si', 5, 3, 'Extasis', 'Semanalmente', 4, 'Si', 'Hormona Tiroides', 'abc'),
+(12, 'Diabetes,Cardiovasculares', 'Si', 2, 'Si', 2, 2, 'Si', 2, 2, 'Ninguna', 'Todos los dias', 2, 'Si', 'Antihipertensivos,Antidiabeticos', 'wqe'),
+(23, 'Otros', 'Si', 3, 'Si', 2, 3, 'Si', 3, 5, '', 'Todos los dias', 6, 'Si', 'Antiarritmicos', 're duro xD'),
+(45, 'Diabetes,Cardiovasculares,Asma,EPOC,Otros', 'Si', 4, 'Si', 4, 4, 'Si', 4, 4, 'Ninguna,Cocaina,Extasis,Otras', 'Todos los dias', 4, 'Si', 'Antihipertensivos,Antidiabeticos,Diureticos,Antinflamatorios,ATB,Hormona Tiroides,Para el colesterol,Antiarritmicos,Anti anginosos,Otros', 'asd'),
+(695, 'Diabetes', 'Si', 6, 'Si', 7, 6, 'Si', 6, 6, 'Ninguna', 'Todos los dias', 6, 'Si', 'Antiarritmicos', 'asdsa');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `nombre` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `apellido` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `id` int(11) NOT NULL,
+  `email` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `anio` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`nombre`, `apellido`, `id`, `email`, `password`, `anio`) VALUES
+('Joan', '', 117, 'joanibarra@mail.com', '$2y$10$.InaM.JW1CFw8NOhNHLqkeZeNf8PGHy10bhAZhmBdF9UL0ELgcajS', 1),
+('Joan', 'Ibarra', 118, 'ibarra@mail.com', '$2y$10$a5dTBt/d7kBlJ6bdgbJs7uyaDC.H4RIc1vYBIpDbiPr5c7YL/ryW2', 2);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `datosgenerales`
+--
+ALTER TABLE `datosgenerales`
+  ADD PRIMARY KEY (`NumHistoria`);
+
+--
+-- Indices de la tabla `p1percepcion`
+--
+ALTER TABLE `p1percepcion`
+  ADD PRIMARY KEY (`NumHistoria`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
